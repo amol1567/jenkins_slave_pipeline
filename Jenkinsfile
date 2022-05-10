@@ -22,7 +22,7 @@ pipeline {
 
         stage('Run application') {
             steps {
-                sh 'sudo docker run -it --rm kloudlearn-image'
+                sh 'sudo docker run -dit --rm kloudlearn-image'
             }
         }
     }

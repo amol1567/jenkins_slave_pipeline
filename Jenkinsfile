@@ -16,13 +16,13 @@ pipeline {
 
         stage('Docker build') {
             steps {
-                sh 'docker build --no-cache -t kloudlearn-image .'
+                sh 'sudo docker build --no-cache -t kloudlearn-image .'
             }
         }
 
         stage('Run application') {
             steps {
-                sh 'docker run -it --rm kloudlearn-image'
+                sh 'sudo docker run -it --rm kloudlearn-image'
             }
         }
     }
